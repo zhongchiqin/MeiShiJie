@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZCQTodayTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clS-3a-tCc">
+                        <rect key="frame" x="274" y="8" width="30" height="27.5"/>
+                        <color key="backgroundColor" red="0.57525202809999998" green="0.80430061870000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Li2-Lr-6YH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="更多">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="moreBut:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pnN-I2-NYP"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prE-n2-IQq">
+                        <rect key="frame" x="120" y="9.5" width="80" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="clS-3a-tCc" secondAttribute="trailing" constant="16" id="Fy2-YG-PLg"/>
+                    <constraint firstItem="prE-n2-IQq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="cL1-0V-262"/>
+                    <constraint firstAttribute="bottom" secondItem="clS-3a-tCc" secondAttribute="bottom" constant="8" id="let-os-yB1"/>
+                    <constraint firstItem="clS-3a-tCc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="mZS-OC-L1d"/>
+                    <constraint firstItem="prE-n2-IQq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ynk-oF-j6I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="moreBut" destination="clS-3a-tCc" id="kGl-p9-ivP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

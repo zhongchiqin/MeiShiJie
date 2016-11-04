@@ -12,8 +12,10 @@
 
 +(instancetype)headerWithDict:(NSDictionary *)dict
 {
-    ZCQHeaderModel *model = [[self alloc]init];
+    ZCQHeaderModel *model = [ZCQHeaderModel mj_objectWithKeyValues:dict];
+//    MJUser *user = [MJUser mj_objectWithKeyValues:dict];
     [model mj_setKeyValues:dict];
     return model;
 }
 @end
+  

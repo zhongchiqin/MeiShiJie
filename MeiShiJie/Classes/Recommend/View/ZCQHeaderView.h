@@ -10,4 +10,6 @@
 
 @interface ZCQHeaderView : UIView
 @property(nonatomic,strong)NSDictionary *dict;
+@property(nonatomic, strong)UIViewController *vc;
+
 @end

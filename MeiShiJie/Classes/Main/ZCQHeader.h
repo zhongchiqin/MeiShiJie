@@ -6,6 +6,8 @@
 //  Copyright © 2016年 钟炽琴. All rights reserved.
 //
 
+#import <Masonry.h>
+
 #ifndef ZCQHeader_h
 #define ZCQHeader_h
 #define MeiShiJieColor [UIColor colorWithRed:1.00f green:0.32f blue:0.32f alpha:1.00f]
@@ -13,12 +15,15 @@
 #define ZCQWidth ([UIScreen mainScreen].bounds.size.width)
 #define ZCQHeigth ([UIScreen mainScreen].bounds.size.height)
 
-
+//
 #define Searc_url @"http://api.meishi.cc/v5/show.php?format=json"
+
+//推荐
 #define Recommend1_URL @"http://api.meishi.cc/v5/index5.php?format=json"
+
 #define Recommend2_URL @"http://api.meishi.cc/v5/index5.php?format=json&page=2"
 
-
-#define Found_URL @"http://api.meishi.cc/v5/faxian_new.php?format=json"
+//发现
+#define Found_URL @"http://api.meishi.cc/v5/faxian_new2.php"
 
 #endif /* ZCQHeader_h */

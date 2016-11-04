@@ -7,7 +7,6 @@
 //
 
 #import "ZCQHeaderScrollerVIew.h"
-
 #import "ZCQHeaderScrollerView.h"
 #import "UIImageView+WebCache.h"
 #import "ZCQHeaderModel.h"
@@ -39,6 +38,7 @@
     }
     return _scrollerView;
 }
+
 - (UIPageControl *)pc
 {
     if (!_pc) {
@@ -49,15 +49,18 @@
 
 - (void)setDataArray:(NSArray *)dataArray
 {
-    [self clippingImageWithDataArray:(NSArray *)dataArray];
-    
+    if (dataArray.count != 0) {
+        [self clippingImageWithDataArray:(NSArray *)dataArray];
+    }
 }
 
 - (void)setTitleArray:(NSArray *)titleArray
 {
-    [self clippingImageWithTitleArray:(NSArray *)titleArray];
-    [self createPageControlWithTitleArray:(NSArray *)titleArray];
     
+    if (titleArray.count != 0) {
+        [self clippingImageWithTitleArray:(NSArray *)titleArray];
+        [self createPageControlWithTitleArray:(NSArray *)titleArray];
+    }
 }
 
 - (void)setUpUI
@@ -77,7 +80,6 @@
     _pc.currentPage = scrollView.contentOffset.x/ZCQWidth;
 }
 
-
 - (void)createPageControlWithTitleArray:(NSArray *)titleArray
 {
 #pragma mark - 小点点
@@ -95,15 +97,12 @@
     
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 3; j++) {
-            
             ZCQHeaderModel *model = [ZCQHeaderModel headerWithDict:dataArray[t]];
-            
             UIImageView * imageView  = [[UIImageView alloc]initWithFrame:CGRectMake(ZCQWidth*i + 10, 100*j, ZCQWidth-20, 150)];
             [imageView sd_setImageWithURL:[NSURL URLWithString:model.titlepic] placeholderImage:nil];
             UIBezierPath *path = [UIBezierPath bezierPath];
             path.lineCapStyle = kCGLineCapRound; //线条拐角
             path.lineJoinStyle = kCGLineCapRound; //终点处理
-            
             
             UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, ZCQWidth-40, 20)];
             label1.text = model.title;

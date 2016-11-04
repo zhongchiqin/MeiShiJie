@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ZCQTabBarController.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+//     Override point for customization after application launch.
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     ZCQTabBarController *bar = [[ZCQTabBarController alloc]init];
     [_window makeKeyAndVisible];

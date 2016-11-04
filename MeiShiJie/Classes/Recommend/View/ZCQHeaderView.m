@@ -26,7 +26,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
-        [self creatHeaderViewWithDict:_dict];
+            [self creatHeaderViewWithDict:_dict];
         
     }
     return self;
@@ -42,16 +42,17 @@
 -(void)setDict:(NSDictionary *)dict
 {
     _dict = dict;
+//    NSLog(@"%@",_dict[@"san_can"]);
     _scorllerView.dataArray = _dict[@"san_can"];
     _scorllerView.titleArray = _dict[@"san_can_titles"];
-    [self creatHeaderViewWithDict:_dict];
-    [self creatButtonWithArr:_dict[@"fenlei"]];
-    [self creatTowButtonWithDict:_dict];
-    
+    if (_dict.count != 0) {
+        [self creatButtonWithArr:_dict[@"fenlei"]];
+        [self creatTowButtonWithDict:_dict];
+    }
 }
+
 - (void)creatHeaderViewWithDict:(NSDictionary *)dict
 {
-    
     [self addSubview:self.scorllerView];
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 470, ZCQWidth, 80)];
     imageView.image = [UIImage imageNamed:@"home_yuanhu"];
@@ -61,12 +62,12 @@
     [self addSubview:_viewvv];
     
 }
+
+//创建分类按钮
 - (void)creatButtonWithArr:(NSArray *)arr
 {
-    
     for (int i = 0; i < 4; i++) {
         ZCQCategoryModel *model = [ZCQCategoryModel categoryWithDict:arr[i]];
-        NSLog(@"%@",model.title);
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((ZCQWidth-125)/4 * i +25*(i+1), 0, (ZCQWidth-125)/4, (ZCQWidth-125)/4)];
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.image]];
         UIImage *image = [UIImage imageWithData:data];
@@ -77,10 +78,32 @@
         lable.textAlignment = NSTextAlignmentCenter;
         [_viewvv addSubview:lable];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.tag = i;
+        [button addTarget:self action:@selector(CategoryBu:) forControlEvents:UIControlEventTouchUpInside];
         [_viewvv addSubview:button];
     }
-    
+//    NSLog(@"====+++++viewvv====%@",NSStringFromCGRect(_viewvv.frame));
 }
+
+- (void)CategoryBu:(UIButton *)sender
+{
+    switch (sender.tag) {
+        case 0:
+            NSLog(@"你点击了菜谱分类");
+            break;
+        case 1:
+            NSLog(@"你点击了视频分类");
+            break;
+        case 2:
+            NSLog(@"你点击了早餐");
+            break;
+        case 3:
+            NSLog(@"你点击了附近");
+            break;
+    }
+}
+
+//创建排行两个按钮
 - (void)creatTowButtonWithDict:(NSDictionary *)dict
 {
     
@@ -97,18 +120,20 @@
         [imageView addSubview:button];
         button.tag = i;
         [button addTarget:self action:@selector(buc:) forControlEvents:UIControlEventTouchUpInside];
+
     }
 }
+
+
 - (void)buc:(UIButton *)bu
 {
     switch (bu.tag) {
         case 0:
-            NSLog(@"vapvrw");
+            NSLog(@"你点击了排行榜");
+            
             break;
         case 1:
-            NSLog(@"222222");
-            break;
-        default:
+            NSLog(@"你点击了只能菜组");
             break;
     }
 }

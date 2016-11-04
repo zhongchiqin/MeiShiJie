@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     self.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationBar.translucent = NO;
+//     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:MeiShiJieColor}];
+  
 }
 
 - (void)didReceiveMemoryWarning {

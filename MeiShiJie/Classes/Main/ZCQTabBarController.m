@@ -23,7 +23,7 @@
 }
 
 - (void)creatTabBar{
-    [self addController:@"ZCQRecommendViewControlle" WithTitle:@"推荐" NormalImageName:@"home_recipe~ipad" SelectImageName:@"home_reciped~ipad"];
+    [self addController:@"ZCQRecommendViewController" WithTitle:@"推荐" NormalImageName:@"home_recipe~ipad" SelectImageName:@"home_reciped~ipad"];
     [self addController:@"ZCQFoundViewController" WithTitle:@"发现" NormalImageName:@"home_cd" SelectImageName:@"home_cded"];
     [self addController:@"ZCQShopViewController" WithTitle:@"商城" NormalImageName:@"home_menu" SelectImageName:@"home_menued"];
     [self addController:@"ZCQMessageViewController" WithTitle:@"食话" NormalImageName:@"home_rank" SelectImageName:@"home_ranked"];
@@ -39,11 +39,9 @@
     UIImage *selectImage = [[UIImage imageNamed:selectImageName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.tabBarItem = [[UITabBarItem alloc]initWithTitle:title image:normalImage selectedImage:selectImage];
     ZCQNavController *nav = [[ZCQNavController alloc]initWithRootViewController:controller];
-    
     NSMutableArray *array = [NSMutableArray arrayWithArray:self.viewControllers];
     [array addObject:nav];
     self.viewControllers = array;
-    
 }
 
 @end
