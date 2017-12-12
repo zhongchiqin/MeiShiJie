@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27CF36DA4F5A7C936192F41C /* libPods-MeiShiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53FD7A4C5124EE48F33E94A /* libPods-MeiShiJie.a */; };
 		8708E8291D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8708E8271D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.m */; };
 		8708E82A1D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8708E8281D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.xib */; };
 		8708E82D1D71EAA300AA11A4 /* ZCQShicai2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8708E82C1D71EAA300AA11A4 /* ZCQShicai2TableViewCell.m */; };
@@ -910,6 +911,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002E9C9FEAFAB975C60DBCDE /* Pods-MeiShiJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeiShiJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeiShiJie/Pods-MeiShiJie.debug.xcconfig"; sourceTree = "<group>"; };
+		193A9035FDB8C2832F674B8B /* Pods-MeiShiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeiShiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeiShiJie/Pods-MeiShiJie.release.xcconfig"; sourceTree = "<group>"; };
 		8708E8261D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCQGongyi6TableViewCell.h; sourceTree = "<group>"; };
 		8708E8271D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCQGongyi6TableViewCell.m; sourceTree = "<group>"; };
 		8708E8281D718FEA00AA11A4 /* ZCQGongyi6TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCQGongyi6TableViewCell.xib; sourceTree = "<group>"; };
@@ -1897,6 +1900,7 @@
 		87F2C91B1D66C8D200709AD6 /* ZCQTopic_info11Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCQTopic_info11Model.m; sourceTree = "<group>"; };
 		87F2C91E1D66CD1B00709AD6 /* FoundCellManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundCellManager.h; sourceTree = "<group>"; };
 		87F2C91F1D66CD1B00709AD6 /* FoundCellManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundCellManager.m; sourceTree = "<group>"; };
+		E53FD7A4C5124EE48F33E94A /* libPods-MeiShiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeiShiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1905,6 +1909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8783471E1D76DAE400097AFC /* WebP.framework in Frameworks */,
+				27CF36DA4F5A7C936192F41C /* libPods-MeiShiJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1925,6 +1930,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32242BBFB374A8AB8B261041 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E53FD7A4C5124EE48F33E94A /* libPods-MeiShiJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3404553B0C11E9803FFA1A0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				002E9C9FEAFAB975C60DBCDE /* Pods-MeiShiJie.debug.xcconfig */,
+				193A9035FDB8C2832F674B8B /* Pods-MeiShiJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8715E5211CE81D7700712EDC = {
 			isa = PBXGroup;
 			children = (
@@ -1932,6 +1954,8 @@
 				8715E5461CE81D7700712EDC /* MeiShiJieTests */,
 				8715E5511CE81D7700712EDC /* MeiShiJieUITests */,
 				8715E52B1CE81D7700712EDC /* Products */,
+				3404553B0C11E9803FFA1A0E /* Pods */,
+				32242BBFB374A8AB8B261041 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3213,9 +3237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8715E5571CE81D7700712EDC /* Build configuration list for PBXNativeTarget "MeiShiJie" */;
 			buildPhases = (
+				C29D4F2799EC865BFF6AF2E7 /* [CP] Check Pods Manifest.lock */,
 				8715E5261CE81D7700712EDC /* Sources */,
 				8715E5271CE81D7700712EDC /* Frameworks */,
 				8715E5281CE81D7700712EDC /* Resources */,
+				B5E6654D91B789B8111FF237 /* [CP] Embed Pods Frameworks */,
+				15B7C2975BD169B4A31EC95E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4115,6 +4142,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15B7C2975BD169B4A31EC95E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeiShiJie/Pods-MeiShiJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5E6654D91B789B8111FF237 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeiShiJie/Pods-MeiShiJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29D4F2799EC865BFF6AF2E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8715E5261CE81D7700712EDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -4355,6 +4430,7 @@
 		};
 		8715E5581CE81D7700712EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 002E9C9FEAFAB975C60DBCDE /* Pods-MeiShiJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -4381,6 +4457,7 @@
 		};
 		8715E5591CE81D7700712EDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193A9035FDB8C2832F674B8B /* Pods-MeiShiJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
